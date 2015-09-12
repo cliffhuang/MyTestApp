@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bindservice:
                 bindService(new Intent(this, MyService.class), this, BIND_AUTO_CREATE);
-                System.out.println("z");
+                System.out.println("zz");
                 break;
             case R.id.unbindservice:
                 unbindService(this);
