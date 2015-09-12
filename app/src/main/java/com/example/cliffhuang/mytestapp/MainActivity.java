@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.database.sqlite.SQLiteBindOrColumnIndexOutOfRangeException;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bindservice:
                 bindService(new Intent(this, MyService.class), this, BIND_AUTO_CREATE);
+                System.out.println();
                 break;
             case R.id.unbindservice:
                 unbindService(this);
